@@ -13,3 +13,9 @@ services:
       - /volume1/docker/archiveflow:/config
     ports:
       - 8066:5656
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://127.0.0.1:5656/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
