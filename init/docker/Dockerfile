@@ -35,13 +35,13 @@ ARG COMMIT
 ARG VERSION
 ARG ITERATION
 ARG LICENSE=MIT
-ARG SOURCE_URL=http://github.com/golift/application-builder
-ARG DESC=application-builder
-ARG VENDOR=golift
-ARG AUTHOR=golift
+ARG SOURCE_URL=https://github.com/zaiwuli/archiveflow
+ARG DESC=ArchiveFlow NAS archive extraction service
+ARG VENDOR=zaiwuli
+ARG AUTHOR=zaiwuli
 # Build-time metadata as defined at https://github.com/opencontainers/image-spec/blob/master/annotations.md
 LABEL org.opencontainers.image.created="${BUILD_DATE}" \
-      org.opencontainers.image.title="Unpackerr" \
+      org.opencontainers.image.title="ArchiveFlow" \
       org.opencontainers.image.documentation="https://unpackerr.zip" \
       org.opencontainers.image.description="${DESC}" \
       org.opencontainers.image.url="${SOURCE_URL}" \
