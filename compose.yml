@@ -1,0 +1,15 @@
+services:
+  archiveflow:
+    image: ghcr.io/zaiwuli/archiveflow:latest
+    container_name: archiveflow
+    restart: unless-stopped
+    environment:
+      TZ: ${TZ:-Asia/Shanghai}
+    volumes:
+      - /volume2/解压目录/监控目录:/downloads
+      - /volume2/解压目录/输出目录:/output
+      - /volume2/解压目录/缓存目录:/cache
+      - /volume1/CloudNAS/CloudDrive:/volume1/CloudNAS/CloudDrive
+      - /volume1/docker/archiveflow:/config
+    ports:
+      - 8066:5656
